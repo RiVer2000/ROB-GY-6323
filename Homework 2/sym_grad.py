@@ -1,9 +1,9 @@
 from sympy import init_printing, symbols, exp, Matrix, pprint, simplify, diff
 init_printing()
 x, y, z = symbols('x y z')
-f1 = exp(-(x-1)**2)
+f1 = -exp(-(x-1)**2)
 f2 = (1-x)**2 + 100 * (y-x**2)**2
-f3 = (Matrix([x, y]).T * Matrix([[3,1], [1,3]]) * Matrix([x, y]) + Matrix([1, -1]).T * Matrix([x,y])).doit()
+f3 = (Matrix([x, y]).T * Matrix([[3,1], [1,3]]) * Matrix([x, y]) + Matrix([-1, 1]).T * Matrix([x,y])).doit()
 f4 = (1/2 * Matrix([x, y, z]).T * Matrix([[1, 1, 0],[1, 1, 0], [0, 0, 4]]) * Matrix([x, y, z]) - Matrix([0, 0, 1]).T * Matrix([x, y, z])).doit()
 # pprint(f4)
 
